@@ -1,0 +1,22 @@
+{
+  "name": "@rufait77/demodock",
+  "version": "0.1.0",
+  "description": "Resettable, browser-local product demos. Stateful API mocks, roles, scenarios and a React control dock.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Rufait Islam Nahin",
+  "repository": { "type": "git", "url": "https://github.com/rufait77/DemoDock.git", "directory": "packages/demodock" },
+  "homepage": "https://demodock.rufaitlabs.cloud/docs",
+  "engines": { "node": ">=22.12.0" },
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./react": { "types": "./dist/react.d.ts", "import": "./dist/react.js" },
+    "./store": { "types": "./dist/store.d.ts", "import": "./dist/store.js" },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "peerDependencies": { "msw": "^3.0.3", "react": ">=18" },
+  "peerDependenciesMeta": { "react": { "optional": true } },
+  "devDependencies": { "msw": "3.0.3", "react": "19.3.1" },
+  "keywords": ["demo", "msw", "react", "mock-api", "static", "open-source"]
+}

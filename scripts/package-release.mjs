@@ -1,0 +1,11 @@
+import { join } from 'node:path';
+import { root, packSdk, scaffold } from './scaffold.mjs';
+import { mkdir, cp, writeFile, readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+const output = join(root, '.artifacts/release');
+const tarball = await packSdk(output);
+const directory = join(output, `starter-${Date.now()}`);
+await scaffold(directory, tarball);
+const digest = createHash('sha256').update(await readFile(tarball)).digest('hex');
+await writeFile(join(output, 'SDK-SHA256.txt'), `${digest}  rufait77-demodock-0.1.0.tgz\n`);
+console.log(JSON.stringify({ tarball, starterDirectory: directory, output }));

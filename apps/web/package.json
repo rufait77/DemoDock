@@ -1,0 +1,11 @@
+{
+  "name": "@demodock/web", "version": "0.1.0", "private": true, "type": "module",
+  "dependencies": {
+    "@rufait77/demodock": "0.1.0",
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource-variable/jetbrains-mono": "5.3.0",
+    "lucide-react": "1.66.0",
+    "msw": "3.0.3", "react": "19.3.1", "react-dom": "19.3.1"
+  },
+  "msw": { "workerDirectory": ["public"] }
+}
